@@ -1,0 +1,547 @@
+:root {
+    --gold: #efb21f;
+    --gold2: #e3a504;
+    --dark: #0b0b0c;
+    --muted: #6c757d;
+    --border: #e9ecef;
+    --shadow: 0 18px 55px rgba(0, 0, 0, .18);
+    --shadow2: 0 10px 35px rgba(0, 0, 0, .12);
+    --radius: 10px;
+    --container: 1140px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111;
+    background: #fff;
+}
+
+/* container like screenshot */
+.ta-container {
+    max-width: var(--container);
+}
+
+/* TOP NAV (overlay on hero) */
+.ta-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 30;
+    color: #ffffff;
+}
+
+.ta-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+
+.ta-brand-pill {
+    background: var(--gold);
+    color: #111;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.ta-brand-text {
+    font-size: 18px;
+}
+
+.ta-navlinks {
+    gap: 22px;
+}
+
+/* Navbar hover + active color */
+.ta-navlinks a {
+    color: #ffffff;
+    transition: color 0.2s ease;
+}
+
+.ta-navlinks a:hover,
+.ta-navlinks a.active {
+    color: #E3A504;
+    opacity: 1;
+}
+
+.ta-btn {
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 10px 14px;
+}
+
+.ta-btn-book {
+    background: var(--gold);
+    color: #111;
+    border: 0;
+}
+
+.ta-btn-book:hover {
+    background: var(--gold2);
+}
+
+/* HERO */
+
+.ta-brand-img img {
+    height: 44px;
+    /* tweak if needed */
+    width: auto;
+    display: block;
+}
+
+.ta-hero {
+    position: relative;
+    padding: 110px 0 70px;
+    background: url("../assets/home-background.png") center/cover no-repeat;
+}
+
+.ta-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .6);
+}
+
+.ta-hero-title {
+    position: relative;
+    color: #fff;
+    margin-bottom: 26px;
+}
+
+.ta-hero-title h1 {
+    margin: 0;
+    font-size: 54px;
+    font-weight: 800;
+    letter-spacing: .3px;
+}
+
+.ta-hero-title p {
+    margin: 6px 0 0;
+    opacity: .95;
+    font-size: 18px;
+}
+
+.ta-accent {
+    color: var(--gold);
+}
+
+/* BOOKING BLOCK (white panel + left yellow) */
+.ta-booking-wrap {
+    position: relative;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+}
+
+.ta-save-panel {
+    background: var(--gold);
+    color: #111;
+    padding: 32px 26px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ta-save-small {
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.ta-save-big {
+    font-weight: 900;
+    font-size: 58px;
+    line-height: 1;
+    margin-top: 6px;
+}
+
+.ta-save-mid {
+    font-weight: 900;
+    font-size: 52px;
+    line-height: 1;
+    margin: 6px 0;
+}
+
+.ta-form-panel {
+    padding: 26px 26px 18px;
+}
+
+.ta-label {
+    display: block;
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.ta-input {
+    border: 1px solid #cfcfcf;
+    border-radius: 4px;
+    height: 38px;
+    font-size: 13px;
+}
+
+.ta-form-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 6px;
+}
+
+.ta-note {
+    font-size: 11px;
+    color: #666;
+}
+
+.ta-btn-quote {
+    background: var(--gold);
+    border: 0;
+    color: #111;
+    padding: 10px 18px;
+}
+
+.ta-btn-quote:hover {
+    background: var(--gold2);
+}
+
+/* SERVICES (white cards) */
+.ta-section {
+    padding: 58px 0;
+}
+
+.ta-section-white {
+    background: #fff;
+}
+
+.ta-service-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 34px 22px;
+    text-align: center;
+    box-shadow: var(--shadow2);
+}
+
+
+.ta-pricing-icon {
+    width: 56px;
+    height: auto;
+}
+
+.ta-service-title {
+    font-size: 18px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.ta-service-pax {
+    font-size: 11px;
+    color: #666;
+    font-weight: 700;
+    margin-top: 6px;
+}
+
+.ta-service-divider {
+    height: 1px;
+    background: #eee;
+    margin: 20px 0 16px;
+}
+
+.ta-service-sub {
+    font-size: 11px;
+    color: #777;
+    font-weight: 700;
+}
+
+.ta-service-price {
+    font-size: 34px;
+    font-weight: 900;
+    color: var(--gold2);
+    margin-top: 4px;
+}
+
+/* STATS STRIP */
+.ta-stats {
+    padding: 26px 0;
+    background:
+        linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
+        url("https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=2400&q=80");
+    background-size: cover;
+    background-position: center;
+}
+
+.ta-stat-box {
+    padding: 12px 10px;
+    color: #fff;
+}
+
+.ta-stat-value {
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.ta-stat-label {
+    font-size: 12px;
+    font-weight: 800;
+    opacity: .9;
+    margin-top: 6px;
+}
+
+/* APP PROMO (yellow band) */
+.ta-app {
+    background: var(--gold);
+    padding: 58px 0;
+}
+
+.ta-app-title {
+    font-size: 44px;
+    font-weight: 900;
+    margin: 0 0 10px;
+}
+
+.ta-app-text {
+    max-width: 52ch;
+    color: #2b2b2b;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.ta-store {
+    width: 190px;
+    height: 56px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.ta-store:hover {
+    color: #fff;
+    opacity: .9;
+}
+
+.ta-phone-mock img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ta-phone-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, .12);
+    padding-bottom: 10px;
+}
+
+.ta-phone-body {
+    padding-top: 14px;
+}
+
+.ta-phone-h1 {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.ta-phone-sub {
+    font-size: 11px;
+    opacity: .85;
+    margin-top: 4px;
+}
+
+.ta-phone-form {
+    margin-top: 14px;
+    height: 140px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .08);
+}
+
+/* ARTICLES */
+.ta-articles-title {
+    font-size: 44px;
+    font-weight: 900;
+    margin: 0;
+}
+
+.ta-article-card {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: var(--shadow2);
+}
+
+.ta-article-img {
+    height: 220px;
+    background:
+        linear-gradient(rgba(0, 0, 0, .10), rgba(0, 0, 0, .10)),
+        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+}
+
+.ta-article-body {
+    padding: 18px 18px 16px;
+}
+
+.ta-article-h {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.ta-article-meta {
+    margin-top: 6px;
+    font-size: 11px;
+    color: #777;
+    font-weight: 700;
+}
+
+.ta-article-text {
+    margin: 10px 0 0;
+    color: #666;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.ta-btn-blog {
+    background: var(--gold);
+    border: 0;
+    color: #111;
+    padding: 12px 18px;
+}
+
+.ta-btn-blog:hover {
+    background: var(--gold2);
+}
+
+/* BOTTOM BANNER (repeat) */
+.ta-bottom {
+    position: relative;
+    padding: 58px 0;
+    background: url("../assets/home-background.png") center/cover no-repeat;
+}
+
+.ta-bottom-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .62);
+}
+
+.ta-bottom-save {
+    background: rgba(239, 178, 31, .95);
+    border-radius: 6px;
+    padding: 28px 22px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.ta-bottom-service {
+    color: #fff;
+    text-align: center;
+    padding: 10px 8px;
+}
+
+.ta-bottom-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.ta-bottom-icons img {
+    width: 60px;
+    /* matches reference size */
+    height: auto;
+}
+
+.ta-bottom-title {
+    font-weight: 900;
+    margin-top: 8px;
+}
+
+.ta-bottom-pax {
+    font-size: 11px;
+    opacity: .85;
+    font-weight: 700;
+}
+
+.ta-bottom-sub {
+    margin-top: 12px;
+    font-size: 11px;
+    opacity: .85;
+    font-weight: 800;
+}
+
+.ta-bottom-price {
+    font-size: 30px;
+    font-weight: 900;
+    color: var(--gold);
+    margin-top: 4px;
+}
+
+/* FOOTER */
+.ta-footer {
+    background: url("../assets/taxi-background.png") center/cover no-repeat;
+    color: #fff;
+    padding: 46px 0;
+    position: relative;
+}
+
+.ta-footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .75);
+}
+
+.ta-footer>* {
+    position: relative;
+    z-index: 1;
+}
+
+.ta-footer-brand img {
+    width: 120px;
+    /* footer-safe width */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.ta-footer-icons a {
+    color: #fff;
+    font-size: 18px;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.ta-footer-icons a:hover {
+    opacity: 0.8;
+}
+
+
+/* responsive booking */
+@media (max-width: 991px) {
+    .ta-booking-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .ta-save-panel {
+        padding: 22px 18px;
+    }
+
+    .ta-hero-title h1 {
+        font-size: 42px;
+    }
+}
